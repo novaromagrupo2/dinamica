@@ -77,7 +77,7 @@ function BlogPostsController() {
     const id = req.params.id;
     
     BlogPosts.destroy({ where: { id: id } })
-      .then(res.redirect('/blog-posts'))
+      .then(res.redirect('/admin/blog-posts/list'))
       .catch((err) => console.log(err))
   }
 
